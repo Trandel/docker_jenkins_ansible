@@ -18,8 +18,8 @@ groupmod -g 497 docker; \
 usermod -G docker jenkins; \
 pip install awscli docker docker-compose boto3; \
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer; \
-mv /etc/localtime /etc/localtime.default;
-cp /usr/share/zoneinfo/Europe/London /etc/localtime;
+mv /etc/localtime /etc/localtime.default; \
+cp /usr/share/zoneinfo/Europe/London /etc/localtime; \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 USER jenkins
