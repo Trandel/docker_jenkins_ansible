@@ -20,6 +20,7 @@ pip install awscli docker docker-compose boto3; \
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer; \
 mv /etc/localtime /etc/localtime.default; \
 cp /usr/share/zoneinfo/Europe/London /etc/localtime; \
+mkdir -p /var/jenkins_workspace && chown jenkins: /var/jenkins_workspace; \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 USER jenkins
