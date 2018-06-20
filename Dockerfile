@@ -23,4 +23,6 @@ cp /usr/share/zoneinfo/Europe/London /etc/localtime; \
 mkdir -p /var/jenkins_workspace && chown jenkins: /var/jenkins_workspace; \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+VOLUME ["/var/jenkins_workspace"]
+
 USER jenkins
