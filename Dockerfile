@@ -23,6 +23,8 @@ mv /etc/localtime /etc/localtime.default; \
 cp /usr/share/zoneinfo/Europe/London /etc/localtime; \
 mkdir -p /var/jenkins_workspace && chown jenkins: /var/jenkins_workspace; \
 echo "jenkins ALL=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/jenkins"; \
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -; \
+apt-get install -y nodejs; \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 VOLUME ["/var/jenkins_workspace"]
