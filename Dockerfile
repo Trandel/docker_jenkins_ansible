@@ -14,7 +14,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367; \
 apt-get update; \
 apt-get install -y ansible git python-pip php7.0-cli php7.0-bcmath php7.0-mysql \
 php7.0-mbstring php7.0-dom php7.0-curl php7.0-zip docker-ce rsync ssh-askpass \
-mysql-client; \
+mysql-client jq; \
 groupmod -g 497 docker; \
 usermod -G docker jenkins; \
 pip install awscli docker docker-compose boto3; \
